@@ -1,0 +1,208 @@
+/* Menghapus style yang tidak digunakan */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: hidden;
+}
+
+/* Layouting */
+.sidebar {
+  width: 10em;
+  height: 100vh;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  width: 105%;
+  padding: 5px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.04);
+  justify-content: start;
+  border-radius: 50px;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, 0.01);
+}
+
+.profile .title {
+  text-align: start;
+  line-height: 15px;
+}
+
+h1 {
+  font-size: 12px;
+  font-weight: 600;
+}
+p {
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.profile img {
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.profile > input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 5px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.search {
+  width: 105%;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 50px;
+  padding-right: 2px;
+  box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, 0.01);
+}
+
+.search input {
+  width: 105%;
+  outline: none;
+  border: none;
+  height: 25px;
+  background: transparent;
+  position: relative;
+}
+
+.search input::placeholder {
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+.list-item {
+  width: 105%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, 0.01);
+  border-radius: 50px;
+}
+
+.list-item ul {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.list-item ul li a span {
+  padding-right: 2px;
+  font-size: 12px;
+}
+
+.list-item ul li i {
+  padding-right: 17px;
+  font-size: 12px;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, 0.01);
+  border-radius: 50px;
+  width: 102%;
+  height: 80px;
+}
+
+.logout ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.logout ul li button span {
+  font-size: 12px;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.logout ul li button {
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Active */
+.sidebar.active {
+  width: 5em;
+  height: 100vh;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.profile.active {
+  display: flex;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, 0.01);
+}
+
+.title .heading.active {
+  font-size: 0px;
+}
+
+.title .pragraf.active {
+  font-size: 0px;
+}
+
+.list-item ul li a span.active {
+  font-size: 0px;
+}
+
+.list-item ul li i.active {
+  font-size: 12px;
+  margin-left: 17px;
+}
+
+.logout ul li button span.active {
+  font-size: 0px;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+/* Animation */
+/*  x .list-item ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  width: max-content;
+  padding-left: 10px;
+} */

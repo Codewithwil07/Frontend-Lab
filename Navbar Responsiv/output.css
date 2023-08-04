@@ -1,0 +1,151 @@
+    @import url('https://fonts.googleapis.com/css?family=Carter One');
+    *{
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body{
+        font-family: Arial;
+        overflow-x: hidden;
+    }
+
+    nav{
+        display: flex;
+        background-color: blueviolet;
+        justify-content: space-between;
+        padding: 0 20px;
+        align-items: center;
+        height: 2.5em;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .logo img{
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .logo h3{
+        align-items: center;
+        font-size: 0.8em;
+        font-weight: lighter;
+        color: white;
+        font-family: 'Carter One';
+    }
+
+    nav ul{
+        display: flex;
+        width: 40%;
+        justify-content: space-evenly;
+    }
+
+    nav ul li a{
+        font-size: 0.8em;
+        color: white;
+    }
+    nav ul li a:hover{
+        color: rgb(237, 237, 237);
+    }
+
+    .menu-toggle{
+        display: flex;
+        flex-direction: column;
+        height: 10px;
+        justify-content: space-between;
+        position: relative;
+        display: none;
+    }
+
+    .menu-toggle span{
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        justify-content: space-between;
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+
+
+    .menu-toggle input{
+        position: absolute;
+        opacity: 0.8;
+        width: 20px;
+        height: 13px;
+        top: -1px;
+        left: -2.6px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu-toggle input:nth-child(2){
+        transform-origin: 0 0;
+    }
+
+    .menu-toggle input:last-child{
+        transform-origin: 0 100%;
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(2){
+        background-color: white;
+        transform: rotate(45deg) translate(2px, 5px);
+    } 
+
+    .menu-toggle input:checked ~ span:nth-child(3){
+        opacity: 0;
+        transform: scale(0);
+    } 
+
+    .menu-toggle input:checked ~ span:last-child{
+        background-color: white;
+        transform: rotate(-45deg) translate(0, -4px);
+    } 
+
+
+
+    /* Responsive */
+    /* Ukuran Tablet */
+    @media screen and (max-width: 768px){
+        nav ul{
+            width: 50%;
+        }
+    }
+    /*Ukuran Mobile  */
+    @media screen and (max-width: 576px){
+        nav ul{
+            position: absolute;
+            flex-direction: column;
+            right: 0;
+            top: 0;
+            background-color: blueviolet;
+            width: 80%;
+            height: 100vh;
+            justify-content: space-evenly;
+            align-items: center;
+            transform: translateX(0%);
+            transition: all 1s;
+            opacity: 1;
+        }
+        
+        nav ul.slide{
+            transform: translateX(100%);
+            opacity: 0;
+            transition: all 1s;
+        }
+        
+        .logo h3{
+            z-index: 2;
+        }
+        .menu-toggle {
+            display: flex;
+        }
+    }

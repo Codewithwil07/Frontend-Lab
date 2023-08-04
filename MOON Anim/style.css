@@ -1,0 +1,71 @@
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #21233c;
+  font-family: "Klee One";
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p.latter.first,
+p.latter.third {
+    color: #ffffff;
+  padding: 2.2em;
+  font-size: 3.5em;
+}
+
+div.orbit {
+  position: relative;
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: orbit 10s infinite linear;
+}
+
+div.moon {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  top: 14em;
+  left: 44%;
+  box-shadow: 0 0 0 0.6em rgba(255, 255, 255, 0.05),
+0 0 0 1.2em rgba(255, 255, 255, 0.05), 0 0 0 1.8em rgba(255, 255, 255, 0.05);
+}
+
+div.moon::after {
+  content: " ";
+  position: absolute;
+  width: 0.9em; 
+  height: 0.9em;
+  border-radius: 50%;
+  box-shadow: 1em  5em 0 0.2em #e6e6e6, 1.5em 3em 0 -0.06em #e6e6e6, 2.5em 4em 0 -0.01em #e6e6e6;
+}
+
+p.latter.second {
+  position: absolute;
+  top: 70px;
+  color: #ffffff;
+  font-size: 3.5em;
+}
+
+@keyframes orbit {
+  100% {
+    transform: rotate(360deg);
+  }
+}
